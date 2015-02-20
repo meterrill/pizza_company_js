@@ -23,5 +23,13 @@ describe("Pizza", function() {
       testPizza.pizzaSlices();
       expect(testPizza.pizzaSlices()).to.equal(10);
     });
+
+    it("returns 8 if size is small and topping is pepperoni", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.pizzaSize = "small";
+      testPizza.pizzaTopping = "pepperoni";
+      testPizza.pizzaSlices();
+      expect(testPizza.pizzaSlices()).to.equal(8);
+    });
   });
 });
