@@ -16,16 +16,16 @@ $(document).ready(function() {
   $("form#create-pizza").submit(function(event) {
     event.preventDefault();
 
-    var inputtedSize = $("input#pizza-size").val();
-    var inputtedTopping = $("input#pizza-topping").val();
+    var selectedSize = $("select#pizza-size").val();
+    var selectedTopping = $("select#pizza-topping").val();
     var newPizza = Object.create(Pizza);
-    newPizza.pizzaSize = inputtedSize;
-    newPizza.pizzaTopping = inputtedTopping;
+    newPizza.pizzaSize = selectedSize;
+    newPizza.pizzaTopping = selectedTopping;
 
     $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaSize + " " + newPizza.pizzaTopping + "</span></li>");
 
-    $("input#pizza-size").val("");
-    $("input#pizza-topping").val("");
+    // $("input#pizza-size").val("");
+    // $("input#pizza-topping").val("");
 
     $(".pizza").last().click(function() {
       $("#show-slices").show();

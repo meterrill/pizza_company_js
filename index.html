@@ -11,21 +11,35 @@
     <div class="container">
       <h1>Acme Pizza Co</h1>
 
-      <div class="well col-md-4">
+      <div class="well col-md-3">
         <h3>Create a Pizza</h3>
         <form id="create-pizza" class="form-horizontal">
 
-          <div class = "form-group">
-            <label for="pizza-size" class="col-sm-3 control-label">Select size:</label>
+          <!-- <div class = "form-group">
+            <label for="pizza-size" class="col-sm-3">Select size:</label>
             <div class="col-sm-8">
               <input type="text" id="pizza-size" class="form-control">
+            </div>
+          </div> -->
+
+          <div class = "form-group">
+            <label for="pizza-size" class="col-sm-3">Select size:</label>
+            <div class="col-sm-8">
+              <select id="pizza-size" class="form-control">
+                <option value="small">Small (10")</option>
+                <option value="medium">Medium (12")</option>
+                <option value="large">Large (14")</option>
+              </select>
             </div>
           </div>
 
           <div class = "form-group">
-            <label for="pizza-topping" class="col-sm-3 control-label">Select topping:</label>
+            <label for="pizza-topping" class="col-sm-3">Select topping:</label>
             <div class="col-sm-8">
-              <input type="text" id="pizza-topping" class="form-control">
+              <select id="pizza-topping" class="form-control">
+                <option value="cheese">Cheese</option>
+                <option value="pepperoni">Pepperoni</option>
+              </select>
             </div>
           </div>
 
@@ -33,7 +47,7 @@
         </form>
       </div>
 
-      <div class="well col-md-4">
+      <div class="well col-md-3">
         <h3>Pizzas</h3>
         <h5>Select a pizza to see the number of slices</h5>
 
@@ -42,10 +56,12 @@
         </ul>
       </div>
 
-      <div class="well col-md-4">
+      <div class="well col-md-3">
         <h3>Slices</h3>
         <div id="show-slices">
-          <h3>A <span id="size"></span> <span id="topping"></span> pizza has <span id="slices"></span> slices</h3>
+          <p>A <span id="size"></span> <span id="topping"></span> pizza has</p>
+          <p><span id="slices"></span></p>
+          <p>slices</p>
       </div>
     </div>
   </body>
