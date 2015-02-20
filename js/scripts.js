@@ -24,9 +24,6 @@ $(document).ready(function() {
 
     $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaSize + " " + newPizza.pizzaTopping + "</span></li>");
 
-    // $("input#pizza-size").val("");
-    // $("input#pizza-topping").val("");
-
     $(".pizza").last().click(function() {
       $("#show-slices").show();
       $("#size").text(newPizza.pizzaSize);
