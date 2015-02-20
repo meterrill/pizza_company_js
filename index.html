@@ -11,8 +11,8 @@
     <div class="container">
       <h1>Acme Pizza Co</h1>
 
-      <div class="well col-md-8">
-        <h3>Create Pizza</h3>
+      <div class="well col-md-4">
+        <h3>Create a Pizza</h3>
         <form id="create-pizza" class="form-horizontal">
 
           <div class = "form-group">
@@ -35,6 +35,17 @@
 
       <div class="well col-md-4">
         <h3>Pizzas</h3>
+        <h5>Select a pizza to see the number of slices</h5>
+
+        <ul id="pizzas">
+
+        </ul>
+      </div>
+
+      <div class="well col-md-4">
+        <h3>Slices</h3>
+        <div id="show-slices">
+          <h3>A <span id="size"></span> <span id="topping"></span> pizza has <span id="slices"></span> slices</h3>
       </div>
     </div>
   </body>

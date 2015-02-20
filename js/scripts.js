@@ -11,3 +11,27 @@ var Pizza = {pizzaSlices: function() {
                 return slices;
               }
             };
+
+$(document).ready(function() {
+  $("form#create-pizza").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedSize = $("input#pizza-size").val();
+    var inputtedTopping = $("input#pizza-topping").val();
+    var newPizza = Object.create(Pizza);
+    newPizza.pizzaSize = inputtedSize;
+    newPizza.pizzaTopping = inputtedTopping;
+
+    $("ul#pizzas").append("<li><span class='pizza'>" + newPizza.pizzaSize + " " + newPizza.pizzaTopping + "</span></li>");
+
+    $("input#pizza-size").val("");
+    $("input#pizza-topping").val("");
+
+    $(".pizza").last().click(function() {
+      $("#show-slices").show();
+      $("#size").text(newPizza.pizzaSize);
+      $("#topping").text(newPizza.pizzaTopping);
+      $("#slices").text(newPizza.pizzaSlices());
+    });
+  });
+});
