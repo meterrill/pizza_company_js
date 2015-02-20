@@ -3,6 +3,8 @@ var Pizza = {pizzaSlices: function() {
                   var slices = 6;
                 } else if (this.pizzaSize === "medium" && this.pizzaTopping === "cheese") {
                   var slices = 8;
+                } else if (this.pizzaSize === "large" && this.pizzaTopping === "cheese") {
+                  var slices = 10;
                 }
                 return slices;
               }
