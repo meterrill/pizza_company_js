@@ -5,6 +5,8 @@ var Pizza = {pizzaSlices: function() {
                   var slices = 8;
                 } else if ((this.pizzaSize === "large" && this.pizzaTopping === "cheese") || (this.pizzaSize === "medium" && this.pizzaTopping === "pepperoni")) {
                   var slices = 10;
+                } else {
+                  var slices = 12;
                 }
                 return slices;
               }
